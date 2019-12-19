@@ -38,7 +38,7 @@
 
 					// Delay.
 						delay: 7000
-
+					//test
 				};
 
 			// Vars.
