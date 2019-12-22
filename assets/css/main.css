@@ -197,8 +197,8 @@ input, select, textarea {
 		font-weight: 400;
 		line-height: 0;
 		margin: 0 0 1.5rem 0;
-		text-transform: uppercase;
-		letter-spacing: 0.09rem;
+		text-transform: none;
+		letter-spacing: 0.05rem;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1148,14 +1148,14 @@ input, select, textarea {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
+			-moz-transition: background-color 0.5s ease-in-out;
+			-webkit-transition: background-color 0.5s ease-in-out;
+			-ms-transition: background-color 0.5s ease-in-out;
+			transition: background-color 0.5s ease-in-out;
+			-moz-transition-delay: 0s;
+			-webkit-transition-delay: 0s;
+			-ms-transition-delay: 0s;
+			transition-delay: 0.18s;
 			background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../images/overlay.png");
 			background-size: auto,
  256px 256px;
@@ -1180,6 +1180,10 @@ input, select, textarea {
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
+			-moz-filter: blur(0.1rem);
+			-webkit-filter: blur(0.1rem);
+			-ms-filter: blur(0.1rem);
+			filter: blur(0.1rem);
 		}
 
 		body.is-article-visible #bg:after {
@@ -1187,10 +1191,10 @@ input, select, textarea {
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
 			transform: scale(1.0825);
-			-moz-filter: blur(0.2rem);
-			-webkit-filter: blur(0.2rem);
-			-ms-filter: blur(0.2rem);
-			filter: blur(0.2rem);
+			-moz-filter: blur(0.3rem);
+			-webkit-filter: blur(0.3rem);
+			-ms-filter: blur(0.3rem);
+			filter: blur(0.3rem);
 		}
 
 		body.is-preload #bg:before {
@@ -1324,7 +1328,7 @@ input, select, textarea {
 		#header .content {
 			border-style: dotted;
 			border-color: #ffffff;
-			border-top-width: 5px;
+			border-top-width: 0px;
 			border-bottom-width: 10px;
 			max-width: 100%;
 			border-radius: 40%;
@@ -1378,12 +1382,12 @@ input, select, textarea {
 
 				#header nav ul li a {
 					display: block;
-					min-width: 7.5rem;
-					height: 2.75rem;
-					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
+					min-width: 10.5rem;
+					height: 2rem;
+					line-height: 2rem;
+					padding: 0 2rem 0 2rem;
 					text-transform: uppercase;
-					letter-spacing: 0.2rem;
+					letter-spacing: 0.1rem;
 					font-size: 0.8rem;
 					border-bottom: 0;
 				}
