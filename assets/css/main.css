@@ -61,6 +61,10 @@ body {
 	font-family: happynew, courier, "courier new"
 }
 
+.HeaderFont {
+	font-family: snowballs, courier, "courier new"
+}
+
 ol, ul {
 	list-style: none;
 }
