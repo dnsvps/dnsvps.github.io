@@ -34,14 +34,14 @@
 								<div class="MyFont">
 									<h1>DAMPFHERZ</h1>
 								</div>
-								<p> Denis hat nen großen<!--Liquids zum vernaschen--> </p>
+								<p> Liquids zum feiern </p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#liquids"><!--Mahlzeit-->Penis</a></li>
-								<!--<li><a href="#contact">Kontakt</a></li>-->
-								<!--<li><a href="#elements">Elements</a></li>-->
+								<li><a href="#liquids">Speisen</a></li>
+								<li><a href="#verlosung">Gewinne!</a></li>
+								<!--<li><a href="#preise">Preise</a></li>-->
 							</ul>
 						</nav>
 					</header>
@@ -49,20 +49,37 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Intro -->
+						<!-- liquids -->
 							<article id="liquids">
-								<div class=MyFont>
+								<!-- <div class=MyFont>
 									<h2 class="major"><font size =10>Frohe Weihnachten!</font></h2>
-								</div>
-									<p> Wer mir endlich beichtet, dass er ein kleiner homo ist der mir gerne die Eichel lecken würde, kriegt ganz 2020 kostenlose Liquids!  👅🍆🍑 
-									</br> <i>Nur am 24. Dez von 17:00 bis 23:59 Uhr</i><br>
-									<!--<h3 class="major">Christmas Fever!</h3>
+								</div> -->
+									<h3 class="major">Lemon Meringue Pie</h3>
 									<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-									<p> Santa Cloud kommt bald vorbei, du solltest ihn mit ein paar leckeren Weihnachtskeksen bescheren. 🎅 </p>
+									<p> Mit diesem Zitronen-Baiser Kuchen ist der leckere Start ins Neujahr garantiert!</p>
+									<h3 class="major">Juicy Lemon</h3>
+									<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+									<p> Eine erfrischende Zitrone, kloppt den Verstand wie 'ne gute Ohrfeige wieder rein. Gut für Zielsetzung & Neujahrsvorsätze.</p>
 									<h3 class="major">Extra Creamy Strawberries</h3>
 									<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-									<p> Feinste Sahne - übergossen auf süße, reife Erdbeeren. 🤤
-									-->
+									<p> Feinste Sahne - übergossen auf süße, reife Erdbeeren.</p>
+									<code> <i> 5ml Juicy Lemon </i></code></br>
+									<code> <i> Code: 92324 </i> </code>
+									
+							</article>
+
+							<article id="verlosung">
+									<h3 class="major"><font size =6>Wie funktioniert es?</font></h3>
+									<p> Jeden Tag gibt es etwas zu gewinnen. Spielst du mit?
+									<span class="image main"><img src="images/euro.jpg" alt="" /></span>
+									</br>
+									1. Geh auf "Speisen" und scroll ganz nach unten. </br>
+									2. Du siehst deinen möglichen Gewinn. Beispiel: <code> 10ml Creamy Coconut </code> </br>
+									3. Kopiere oder merke dir den Code. Beispiel: <code> 42069 </code> </br>
+									4. Schreibe mir eine Nachricht mit dem Code und dem Zusatz "Kopf" oder "Zahl". </br>
+									5. Ich werfe die Münze. Gewinnst du, so wird deine gewonnene Menge eingetragen. </br>
+									6. Sobald sich 10ml eines Gewinnliquids angesammelt haben, wirst du benachrichtigt und kannst es abholen! 🎁 </p>
+									
 							</article>
 					</div>
 
@@ -81,131 +98,32 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-	<style>
-	  #snowflakeContainer {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		display: none;
-	  }
+			<script src="Scripts/firework.js"></script>
+			<script src="Scripts/snow.js"></script>
+		
+		<div id="snowflakeContainer">
+		  <span class="snowflake"></span>
+		</div>
+		
+		<style>
+			#snowflakeContainer {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			display: none;
+			}
 
-	  .snowflake {
-		position: fixed;
-		background-color: #FFFFFF;
-		user-select: none;
-		z-index: 1000;
-		pointer-events: none;
-		border-radius: 50%;
-		width: 10px;
-		height: 10px;
-	  }
-	</style>
-
-	<div id="snowflakeContainer">
-	  <span class="snowflake"></span>
-	</div>
-
-	<script>
-	  var snowflakes = [];
-	  var browserWidth;
-	  var browserHeight;
-	  var numberOfSnowflakes = 50;
-	  var resetPosition = false;
-	  var enableAnimations = false;
-	  var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
-	  function setAccessibilityState() {
-		if (reduceMotionQuery.matches) {
-		  enableAnimations = false;
-		} else { 
-		  enableAnimations = true;
-		}
-	  }
-	  setAccessibilityState();
-
-	  reduceMotionQuery.addListener(setAccessibilityState);
-	  function setup() {
-		if (enableAnimations) {
-		  window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
-		  window.addEventListener("resize", setResetFlag, false);
-		}
-	  }
-	  setup();
-	  function Snowflake(element, speed, xPos, yPos) {
-		this.element = element;
-		this.speed = speed;
-		this.xPos = xPos;
-		this.yPos = yPos;
-		this.scale = 1;
-		this.counter = 0;
-		this.sign = Math.random() < 0.5 ? 1 : -1;
-		this.element.style.opacity = (.1 + Math.random()) / 3;
-	  }
-	  Snowflake.prototype.update = function () {
-		this.counter += this.speed / 5000;
-		this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
-		this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
-		this.scale = .5 + Math.abs(10 * Math.cos(this.counter) / 20);
-		setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element);
-		if (this.yPos > browserHeight) {
-		  this.yPos = -50;
-		}
-	  }
-	  function setTransform(xPos, yPos, scale, el) {
-		el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
-	  }
-	  function generateSnowflakes() {
-		var originalSnowflake = document.querySelector(".snowflake");
-		var snowflakeContainer = originalSnowflake.parentNode;
-		snowflakeContainer.style.display = "block";
-		browserWidth = document.documentElement.clientWidth;
-		browserHeight = document.documentElement.clientHeight;
-		for (var i = 0; i < numberOfSnowflakes; i++) {
-		  var snowflakeClone = originalSnowflake.cloneNode(true);
-		  snowflakeContainer.appendChild(snowflakeClone);
-		  var initialXPos = getPosition(50, browserWidth);
-		  var initialYPos = getPosition(50, browserHeight);
-		  var speed = 5 + Math.random() * 40;
-		  var snowflakeObject = new Snowflake(snowflakeClone,
-			speed,
-			initialXPos,
-			initialYPos);
-		  snowflakes.push(snowflakeObject);
-		}
-		snowflakeContainer.removeChild(originalSnowflake);
-
-		moveSnowflakes();
-	  }
-	  function moveSnowflakes() {
-
-		if (enableAnimations) {
-		  for (var i = 0; i < snowflakes.length; i++) {
-			var snowflake = snowflakes[i];
-			snowflake.update();
-		  }      
-		}
-		if (resetPosition) {
-		  browserWidth = document.documentElement.clientWidth;
-		  browserHeight = document.documentElement.clientHeight;
-
-		  for (var i = 0; i < snowflakes.length; i++) {
-			var snowflake = snowflakes[i];
-
-			snowflake.xPos = getPosition(50, browserWidth);
-			snowflake.yPos = getPosition(50, browserHeight);
-		  }
-
-		  resetPosition = false;
-		}
-
-		requestAnimationFrame(moveSnowflakes);
-	  }
-	  function getPosition(offset, size) {
-		return Math.round(-1 * offset + Math.random() * (size + 2 * offset));
-	  }
-	  function setResetFlag(e) {
-		resetPosition = true;
-	  }
-	</script>
+			.snowflake {
+			position: fixed;
+			background-color: #FFFFFF;
+			user-select: none;
+			z-index: 1000;
+			pointer-events: none;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			}
+		</style>
 
 	</body>
 </html>
