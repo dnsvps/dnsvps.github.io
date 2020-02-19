@@ -57,12 +57,21 @@ body {
 		
 	}
 
+@font-face {
+	font-family: 'standard';
+	src:url('../webfonts/standard.woff2') format('woff2'),
+		url('../webfonts/standard.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+		
+	}
+
 .MyFont {
-	font-family: happynew, courier, "courier new"
+	font-family: standard, courier, "courier new"
 }
 
 .HeaderFont {
-	font-family: snowballs, courier, "courier new"
+	font-family: standard, courier, "courier new"
 }
 
 ol, ul {
